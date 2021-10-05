@@ -3,14 +3,17 @@ let firstName = 'Joe';
 
 console.log(`My name is ${firstName}`);
 
-let counter = document.querySelector('h1');
+
 let btn = document.querySelector('button');
+let counter = 0
 
-let plusOne = x => {
-    console.log(x);
+function plusOne() {
+    document.querySelector('p').innerHTML = counter;
+    counter++
+    if (counter === 11) {
+        alert(`Did it, counter is now at ${counter}`)
+    }
 }
-
-plusOne(9);
 
 let doge = {
     type: 'shiba',
@@ -19,3 +22,17 @@ let doge = {
 }
 
 console.log(doge.color);
+
+console.log(typeof doge);
+
+btn.addEventListener('click', plusOne);
+
+let Kobe = 8;
+
+function kobe() {
+    console.log(24);
+}
+
+console.log(Kobe)
+
+kobe();
