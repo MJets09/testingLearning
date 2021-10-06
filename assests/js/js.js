@@ -37,3 +37,25 @@ document.querySelector('form').onsubmit = function() {
     oList.append(newElement);
 
 }
+
+let ASL = ['Ace', 'Sabo', 'Luffy'];
+
+let sabo = document.querySelector('#Sabo');
+let asL = document.querySelector('#ASL');
+
+sabo.innerHTML = ASL[1];
+
+for (let i = 0; i < ASL.length; i++) {
+    asL.innerHTML += ASL[i] + ' ';
+}
+
+let port = document.querySelector('#ace');
+
+function autoTen() {
+    port.innerHTML = 'ACEEEEEEE';
+
+}
+
+let aceBtn = document.querySelector('#aka');
+
+aceBtn.addEventListener('click', autoTen);

@@ -1,6 +1,9 @@
+body {
+    margin: 0;
+}
+
 .basic-grid {
     display: grid;
-    gap: 2em;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
@@ -13,5 +16,6 @@
 }
 
 div {
-    width: 400px;
+    width: auto;
+    height: 400px;
 }
