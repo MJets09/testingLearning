@@ -1,6 +1,5 @@
 let firstName = 'Joe';
 
-
 console.log(`My name is ${firstName}`);
 
 
@@ -10,7 +9,7 @@ let counter = 1
 function plusOne() {
     document.querySelector('p').innerHTML = counter;
     counter++
-    if (counter % 10 == 0) {
+    if (counter === 10) {
         alert(`Did it, counter is now at ${counter}`)
     }
 }
@@ -27,14 +26,19 @@ console.log(typeof doge);
 
 btn.addEventListener('click', plusOne);
 
-let oList = document.querySelector('ul');
-
 
 document.querySelector('form').onsubmit = function() {
-    let newElement = document.createElement('li');
+    let oList = document.querySelector('ul');
     let task = document.querySelector('input').value;
-    newElement.innerHTML = task;
-    oList.append(newElement);
+    let newLi = document.createElement('li');
+
+    newLi.innerHTML = task;
+    oList.append(newLi);
+
+
+    //Figure out why return false is necessary when submitting form
+    return false;
+
 
 }
 
@@ -44,10 +48,6 @@ let sabo = document.querySelector('#Sabo');
 let asL = document.querySelector('#ASL');
 
 sabo.innerHTML = ASL[1];
-
-// for (let i = 0; i < ASL.length; i++) {
-//     asL.innerHTML += ASL[i] + ' ';
-// }
 
 let port = document.querySelector('#ace');
 
@@ -70,7 +70,6 @@ let ages = [33, 55, 11, 22, 44, 15, 69, 74, 81, 24];
 
 let brothers = (a, s, l) => console.log(a, s, l);
 
-
 brothers('Ace', 'Sabo', 'Luffy');
 
 let canDrink = ages.filter(x => x >= 21);
@@ -84,6 +83,16 @@ let Wu = [
     { name: 'SunShangXiang', weapon: 'Chakrams' }
 ];
 
-let swordUser = Wu.filter(hero => hero.weapon === 'Bo Staff');
+let swordUser = Wu.filter(hero => hero.weapon === 'Sword');
 
 console.log(swordUser);
+
+for (let i = 0; i < strawHats.length; i++) {
+    asL.innerHTML += strawHats[i] + ' ';
+}
+
+let sumArray = [5, 8, 10, 22, 34, 66];
+
+let robin = sumArray.filter(x => x < 34);
+
+console.log(robin)
