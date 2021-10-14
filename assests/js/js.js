@@ -35,6 +35,7 @@ document.querySelector('form').onsubmit = function() {
     newLi.innerHTML = task;
     oList.append(newLi);
 
+    document.querySelector('input').value = '';
 
     //Figure out why return false is necessary when submitting form
     return false;
@@ -68,10 +69,6 @@ const strawHats = ['Zoro', 'Nami', 'Sanji', 'Usopp', 'Choppa', 'Robin'];
 
 let ages = [33, 55, 11, 22, 44, 15, 69, 74, 81, 24];
 
-let brothers = (a, s, l) => console.log(a, s, l);
-
-brothers('Ace', 'Sabo', 'Luffy');
-
 let canDrink = ages.filter(x => x >= 21);
 
 console.log(canDrink);
@@ -93,6 +90,35 @@ for (let i = 0; i < strawHats.length; i++) {
 
 let sumArray = [5, 8, 10, 22, 34, 66];
 
-let robin = sumArray.filter(x => x < 34);
 
-console.log(robin)
+let myArray = document.querySelector('#M');
+
+let mFilter = sumArray.filter(x => x > 5);
+
+
+console.log(mFilter);
+
+
+//Using contructors and creating new classes
+class Publication {
+    constructor(title, author, pubDate) {
+        this.title = title;
+        this.author = author;
+        this.pubDate = pubDate;
+    }
+
+    print() {
+        console.log(`
+            Title: ${ this.title }
+            By: ${ this.author }
+            ${ this.pubDate }
+        `);
+    }
+}
+
+
+let Sony = new Publication(
+    'Tony', 'play', 1991
+)
+
+console.log(Sony)
