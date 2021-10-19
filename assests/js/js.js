@@ -122,3 +122,36 @@ let Sony = new Publication(
 )
 
 console.log(Sony)
+
+//Create a Warrior
+class Hero {
+    constructor(name, weapon, vocation, personality) {
+        this.name = name;
+        this.weapon = weapon;
+        this.vocation = vocation;
+        this.personality = personality
+    }
+};
+
+
+let Loto = new Hero('Loto', 'Erdrick Sword', 'Hero', 'Brave');
+
+
+console.log(Loto)
+
+console.log(Loto.weapon)
+
+let kaze = ['wind', 'sun', 'moon'];
+
+for (let i = 0; i < kaze.length; i++) {
+    console.log(kaze[i]);
+}
+
+
+let shoes = {
+    Nike: 'Blazers',
+    Adidas: 'Superstar',
+    putOn(x) { console.log(x) }
+};
+
+shoes.putOn(`${strawHats}`);
