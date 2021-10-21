@@ -52,14 +52,11 @@ sabo.innerHTML = ASL[1];
 
 let port = document.querySelector('#ace');
 
-function autoTen() {
-    port.innerHTML = 'ACEEEEEEE';
-
-}
+let weBack = () => port.innerHTML = 'WE BACKKK'
 
 let aceBtn = document.querySelector('#aka');
 
-aceBtn.addEventListener('click', autoTen);
+aceBtn.addEventListener('click', weBack);
 
 document.querySelector('select').onchange = function() {
     document.querySelector('#Sabo').style.color = this.value;
@@ -155,3 +152,24 @@ let shoes = {
 };
 
 shoes.putOn(`${strawHats}`);
+
+
+let shoesStatement = document.querySelector('#print');
+let shoeType = document.querySelector('#whatShoe')
+
+document.querySelector('#whatShoe').onchange = function() {
+    document.querySelector('print').innerHTML = shoeType.value;
+}
+
+
+
+switch (shoeType) {
+    case 'Nikes':
+        shoesStatement.innerHTML = 'Oh you\'re wearing Blazers'
+        break;
+    case 'Adidas':
+        shoesStatement.innerHTML = 'Oh you\'re wearing Superstars'
+        break;
+    default:
+        shoesStatement.innerHTML = 'Bro I dont know what type of shoes you wearing'
+}

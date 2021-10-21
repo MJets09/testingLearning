@@ -14,7 +14,6 @@ body {
 
 .basic-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
 }
 
 .box {
@@ -32,4 +31,9 @@ div {
 
 .basic-grid {
     grid-area: main;
+}
+
+.printed {
+    grid-area: aside;
+    background-color: grey;
 }
