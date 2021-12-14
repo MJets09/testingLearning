@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr;
-    grid-template-areas: 'header header header''main main main' 'aside aside aside' 'footer footer footer';
+    grid-template-areas: 'header header header''main main main' 'footer footer footer';
 }
 
 .basic-grid {

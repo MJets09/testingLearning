@@ -157,10 +157,11 @@ shoes.putOn(`${strawHats}`);
 let shoesStatement = document.querySelector('#print');
 let shoeType = document.querySelector('#whatShoe')
 
-document.querySelector('#whatShoe').onchange = function() {
-    document.querySelector('print').innerHTML = shoeType.value;
-}
 
+document.querySelector('#whatShoe').onchange = function() {
+    document.querySelector('print').innerHTML = shoeType.value
+        // console.log(shoeType.value);
+}
 
 
 switch (shoeType) {
@@ -173,3 +174,34 @@ switch (shoeType) {
     default:
         shoesStatement.innerHTML = 'Bro I dont know what type of shoes you wearing'
 }
+
+// an array is an iterable
+var arr = [10, 20, 30];
+
+for (let x of arr) {
+    console.log(`Array value: ${ x }`);
+}
+// Array value: 10
+// Array value: 20
+// Array value: 30
+
+let doesHaveBlonde = false;
+let ownsIt;;
+
+if (doesHaveBlonde === false) {
+    ownsIt = "Does not have";
+    console.log(ownsIt);
+} else {
+    ownsIt = "Does have it"
+    console.log(ownsIt)
+}
+
+
+let favoriteShoe = document.querySelector('#favShoe');
+
+function favShoe() {
+    let shoe = prompt('What is your favorite shoe?')
+    alert(`Your favorite shoe is the ${shoe}`)
+}
+
+favoriteShoe.addEventListener('click', favShoe);
