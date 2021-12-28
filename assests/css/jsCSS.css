@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Yeezy;
+    src: url(../yeezy_tstar-bold-webfont.ttf);
+}
+
+body {
+    background-color: #eee9de;
+    font-family: Yeezy;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

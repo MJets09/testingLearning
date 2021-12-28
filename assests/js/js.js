@@ -205,3 +205,30 @@ function favShoe() {
 }
 
 favoriteShoe.addEventListener('click', favShoe);
+
+// let userInput = parseInt(prompt('Enter in your number'));
+
+// let fizzBuzz = document.querySelector('#M');
+
+// if (userInput === 3 && 5) {
+//     fizzBuzz.textContent = 'Fizz'
+// } else {
+//     fizzBuzz.textContent = userInput
+// }
+
+let a = 'ja';
+let b = 'ba';
+
+console.log(a.concat(b));
+
+let theMaster = ['Jet Li', 'Jackie Chan', 'Donnie Yen'];
+
+let asianCine = document.querySelector('#theMaster');
+
+asianCine.innerHTML = theMaster.toString();
+
+const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+for (const bat of cats) {
+    console.log(bat);
+}
