@@ -9,7 +9,7 @@ let counter = 1
 function plusOne() {
     document.querySelector('p').innerHTML = counter;
     counter++
-    if (counter === 10) {
+    if (counter === 10 + 1) {
         alert(`Did it, counter is now at ${counter}`)
     }
 }

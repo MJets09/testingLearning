@@ -12,6 +12,12 @@ body {
     grid-template-areas: 'header header header''main main main' 'footer footer footer';
 }
 
+#jsButton {
+    width: 150px;
+    height: 50px;
+    margin: 30px;
+}
+
 .basic-grid {
     display: grid;
 }
