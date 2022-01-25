@@ -4,21 +4,21 @@ let fBuzz = document.querySelector('#fizzBuzz');
 let pokeMans = ['Infernape', 'Scizor', 'Salamence'];
 let pokeMansSecond = ['Aggron', 'Jolteon', 'Gengar'];
 
-// let userAnswer = parseInt(prompt('Enter in a number'));
+let userAnswer = parseInt(prompt('Enter in a number'));
 
-// for (let i = 1; i <= userAnswer; i++) {
-//     if (i % 3 === 0 && i % 5 === 0) {
-//         console.log('FizzBuzz');
-//     } else if (i % 3 == 0) {
-//         console.log("Fizz");
-//     } else if (i % 5 === 0) {
-//         console.log('Buzz');
-//     } else {
-//         console.log(i);
-//     }
-// }
+for (let i = 1; i <= userAnswer; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz');
+    } else if (i % 3 == 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log('Buzz');
+    } else {
+        console.log(i);
+    }
+}
 
-// mainSection.innerHTML += pokeMans + ', ' + pokeMansSecond;
+mainSection.innerHTML += pokeMans + ', ' + pokeMansSecond;
 
 
 // let stringAnswer = prompt('What word was that again?');
