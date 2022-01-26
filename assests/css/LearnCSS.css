@@ -1,29 +1,20 @@
-header,
-aside,
-div,
-footer {
-    background: skyblue;
-    padding: 20px;
-    border-radius: 15px;
-    margin: 2px;
-}
-
-div {
-    float: left;
-    width: 40%;
-}
-
-aside {
-    float: right;
-    width: 50%;
-}
-
-footer {
-    clear: both;
-}
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: auto;
+}
+
+header,
+footer {
+    height: 300px;
+    border: 5px solid gold;
+    clear: both;
+}
+
+.blockS {
+    float: left;
+    width: 33.3%;
+    height: 150px;
+    border: 5px solid royalblue;
 }
