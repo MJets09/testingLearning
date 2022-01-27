@@ -44,3 +44,35 @@
 // };
 
 // console.log(reverseString('Wonderland'));
+let playerScore = parseInt(prompt('How much did you score today?'));
+
+
+if (playerScore > 29) {
+    alert('Congrats you have a new career high of ' + playerScore)
+} else if (playerScore >= 1) {
+    alert('Nice you dropped ' + playerScore + ' today')
+}
+
+while (playerScore < 25) {
+    playerScore++
+    document.write('Do this<br>');
+}
+
+
+//Determine if a person is rich based on their wallet
+//Prompt them to enter in their brand of wallet
+//based on their answer well say a comment
+
+let userWallet = prompt('What kind of wallet do you have?');
+
+switch (userWallet.toLowerCase()) {
+    case 'jordan':
+        alert('Oh I see you got some Js on');
+        break;
+    case 'nike':
+        alert('Oh Nikes on my feeeet');
+        break;
+    case 'adidas':
+        alert('Yeezy jump over the Jumpman');
+        break;
+}

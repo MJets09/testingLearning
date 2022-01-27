@@ -3,9 +3,22 @@
     src: url(../yeezy_tstar-bold-webfont.ttf);
 }
 
+* {
+    box-sizing: border-box;
+    margin: auto;
+}
+
 body {
     background-color: #eee9de;
     font-family: Yeezy;
+}
+
+main {
+    max-width: 960px;
+}
+
+a {
+    margin-bottom: 50px;
 }
 
 h1,
