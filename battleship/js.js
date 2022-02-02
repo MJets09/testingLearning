@@ -10,7 +10,7 @@
 //Game over
 
 
-let location1;
+let location1 = Math.floor(Math.random() * 3) + 1;;
 let location2;
 let location3;
 let userGuess = prompt('Coordinates?')
@@ -19,12 +19,24 @@ let hit = 0;
 let guesses = 0;
 let isSunk = false;
 
-while (isSunk == false) {
+// while (isSunk == false) {
+//     guess
+//     if (guess == location1, location2, location3) {
+//         alert('Got me')
+//         hit++
+//         guesses++
+//         guess
+//     } else if (guess != location1, location2, location3) {
+//         alert('Nope, nothinggg')
+//         guess++
+//         guess
+//     }
+// }
+
+
+do {
     guess
-    if (userGuess == location1, location2, location3) {
-        hit++
-        guesses++
-    } else {
-        guess
-    }
 }
+while (location1 != guess)
+
+console.log(location1)
