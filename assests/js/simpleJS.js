@@ -131,3 +131,24 @@ function ussop() {
     total += 15;
     document.querySelector('#results').innerHTML = total;
 }
+
+
+
+document.querySelector('button').addEventListener('click', checkDate)
+
+function checkDate() {
+
+    let day = document.querySelector('input').value.toLowerCase();
+
+    if (day == "monday" || day == 'wednesday' || day == 'friday') {
+        alert('Its a odd day of the week');
+    } else if (day == 'tuesday' || day == 'thursday') {
+        alert('Its a even day of the week');
+    } else if (day == 'saturday' || day == 'sunday') {
+        alert('Its da weeknd')
+    } else {
+        alert('You either misspelled or that\'s not a day of the week')
+    }
+
+    console.log(day)
+}
