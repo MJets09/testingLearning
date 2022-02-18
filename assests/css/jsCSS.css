@@ -28,3 +28,20 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}

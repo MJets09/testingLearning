@@ -95,12 +95,39 @@
 // }
 
 
-let num = 7;
-let userNum = parseInt(prompt('Pick a numnber 1-10'));
+// let num = 7;
+// let userNum = parseInt(prompt('Pick a numnber 1-10'));
 
-if (userNum < num) {
-    alert('Less than');
-} else(
-    alert('Greater than')
-)
-console.log(userNum)
+// if (userNum < num) {
+//     alert('Less than');
+// } else(
+//     alert('Greater than')
+// )
+// console.log(userNum)
+
+document.querySelector('#luffy').addEventListener('click', luffy);
+document.querySelector('#zoro').addEventListener('click', zoro);
+document.querySelector('#nami').addEventListener('click', nami);
+document.querySelector('#ussop').addEventListener('click', ussop);
+
+let total = 0;
+
+function luffy() {
+    total = 0;
+    document.querySelector('#results').innerHTML = total;
+}
+
+function zoro() {
+    total += 5;
+    document.querySelector('#results').innerHTML = total;
+}
+
+function nami() {
+    total += 10;
+    document.querySelector('#results').innerHTML = total;
+}
+
+function ussop() {
+    total += 15;
+    document.querySelector('#results').innerHTML = total;
+}
