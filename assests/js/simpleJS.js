@@ -153,18 +153,113 @@ function checkDate() {
     console.log(day)
 }
 
-function ask(question, yes, no) {
-    if (confirm(question)) yes()
-    else no();
+// eatsPlants = true;
+// eatsAnimals = true;
+
+// var category = eatsPlants ? (eatsAnimals ? "omnivore" : "herbivore") : (eatsAnimals ? "carnivore" : "undefined");
+
+let fullPizza = false;
+
+var pizzaTime = fullPizza ? console.log('Issa Pizza time!') : console.log('Dawg im going home');
+
+let education = 'no high school diploma'
+
+
+switch (education) {
+    case 'no high school diploma':
+        salary = 25636;
+
+        relish = salary.toLocaleString('en-US')
+
+        console.log(`"In 2015, a person with an ${education} earned an average of $${relish}/year."`)
+        break;
+    case 'a high school diploma':
+        salary = 35256;
+
+        relish = salary.toLocaleString('en-US')
+
+        console.log(`"In 2015, a person with an ${education} earned an average of $${relish}/year."`)
+        break;
+    default:
+        alert('Okay, I don\'t know that one')
+        break;
 }
 
-function showOk() {
-    alert("You agreed.");
-}
 
-function showCancel() {
-    alert("You canceled the execution.");
-}
+// let why = (question, yes, no) => {
+//     if (confirm(question)) {
+//         yes()
+//     } else {
+//         no()
+//     }
+// };
 
-// usage: functions showOk, showCancel are passed as arguments to ask
-ask("Do you agree?", showOk, showCancel);
+// why('Yeezy thee best?', function() { alert('Yeezusss') }, function() { alert('YOU AINT GOT NO YEEZY') });
+
+
+// let userNum = prompt('Guess a number');
+
+
+// while (userNum < 20) {
+//     let newNum = prompt('Guess a number')
+//     userNum = newNum;
+// }
+
+// let x = 5;
+
+// for (i = 0; i < 11; i++) {
+//     console.log(x * i);
+// }
+
+// var start = 0; // when to start
+// while (start < 10) { // when to stop
+//     start += 2; // how to get to the next item
+//     console.log(start);
+// }
+
+// var x = 1;
+
+// while (x <= 20) {
+//     if (x % 3 === 0 && x % 5 === 0) {
+//         console.log('JuliaJames');
+//     } else if (x % 3 === 0) {
+//         console.log('Julia');
+//     } else if (x % 5 === 0) {
+//         console.log('James')
+//     } else {
+//         console.log(x);
+//     }
+//     x++;
+// }
+
+// let num = 99;
+
+// while (num >= 1) {
+//     if (num === 1) {
+//         console.log(`Only ${num} left.`)
+//     } else if (num === 2) {
+//         console.log(`We're almost there, at ${num}`)
+//     } else {
+//         console.log(`Count from ${num}`)
+//     }
+//     num--
+// }
+
+let num = 60;
+
+while (num >= 0) {
+    if (num === 50) {
+        console.log('Orbiter transfers from ground to internal power');
+    } else if (num === 31) {
+        console.log('Ground launch sequencer is go for auto sequence start')
+    } else if (num == 16) {
+        console.log('Activate launch pad sound suppression system')
+    } else if (num === 10) {
+        console.log('Activate main engine hydrogen burnoff system')
+    } else if (num === 0) {
+        console.log('Solid rocket booster ignition and liftoff!')
+    } else {
+        console.log(`T-${num} seconds`)
+    }
+    num--
+}
