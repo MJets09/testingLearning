@@ -267,13 +267,10 @@ while (num >= 0) {
     num--
 }
 
-function reverseWord(a) {
-    let reversed = ''
+function reverseWord(str) {
+    let reverse = str.split('').reverse();
 
-    for (let i = a.length - 1; i >= 0; i--) {
-        reversed += a[i];
-    }
-    return reversed
+    return reverse
 }
 
 console.log(reverseWord('Meng'))
@@ -316,3 +313,34 @@ function buildTriangle(length) {
 // Note that the function buildTriangle() must return a string 
 // because the console.log() accepts a string argument
 console.log(buildTriangle(10))
+
+
+function Hero(occupation, weapon, hometown) {
+    this.occupation = occupation,
+        this.weapon = weapon,
+        this.hometown = hometown
+}
+
+let Zhao = new Hero('Hero', 'Erdrick\'s Sword', 'Tantagel');
+
+
+console.log(Zhao)
+
+let log = []
+
+function newEntry(x, y) {
+    log.push(x, y)
+}
+
+newEntry('The journey was ever so long', 'June 19th 1841');
+
+
+
+log[1] = 'August 25th 18979'
+
+
+console.log(log)
+
+function squareSum(numbers) {
+    return numbers.reduce((sum, num) => sum + (num * num), 0);
+}
