@@ -326,21 +326,108 @@ let Zhao = new Hero('Hero', 'Erdrick\'s Sword', 'Tantagel');
 
 console.log(Zhao)
 
-let log = []
-
-function newEntry(x, y) {
-    log.push(x, y)
-}
-
-newEntry('The journey was ever so long', 'June 19th 1841');
-
-
-
-log[1] = 'August 25th 18979'
-
-
-console.log(log)
 
 function squareSum(numbers) {
     return numbers.reduce((sum, num) => sum + (num * num), 0);
 }
+
+let threeMusketeers = ['Athos', 'Porthos', 'Aramis'];
+
+for (let i = 0; i < threeMusketeers.length; i++) {
+    console.log(threeMusketeers[i])
+}
+
+
+threeMusketeers.push('D\'Artagnan');
+
+function loopThrough(arr) {
+    let elements = arr.forEach(x => console.log(x))
+    return elements
+}
+
+loopThrough(threeMusketeers)
+
+threeMusketeers.splice(2, 1);
+
+for (let x of threeMusketeers) {
+    console.log(x)
+}
+
+const values = [3, 11, 7, 2, 9, 10];
+
+function addSums(z) {
+    let sum = z.reduce((a, b) => a + b, 0)
+    console.log(sum)
+}
+
+function maxValue(y) {
+    let maximum = Math.max(...y)
+
+    console.log(maximum)
+}
+
+function makeStop() {
+
+    let input = ''
+
+    while (input !== 'stop') {
+        input = prompt('Enter in a word')
+        console.log(input)
+    }
+}
+
+const aurora = {
+    name: "Aurora",
+    health: 150,
+    strength: 25,
+    xp: 0,
+
+    // Return the character description
+    describe() {
+        return `${this.name} has ${this.health} health points and ${this
+        .strength} as strength and ${this.xp} XP points`;
+    }
+};
+
+aurora.xp += 30;
+
+console.log(aurora.describe());
+
+function dog(name, species, size, bark) {
+    this.name = name,
+        this.species = species,
+        this.size = size,
+        this.bark = function() {
+            return bark
+        }
+}
+
+let Fang = new dog('Fang', 'boardhound', '75\"', 'Grrr! Grrr!')
+
+console.log(`${Fang.name} is a ${Fang.species} dog measuring ${Fang.size}`);
+console.log(`Look, a cat! ${Fang.name} barks: ${Fang.bark()}`);
+
+var countSheep = function(num) {
+
+    let sheep = ''
+
+    for (let i = 1; i <= num; i++) {
+        sheep += `${i} sheep...`
+    }
+    return sheep
+}
+
+console.log(countSheep(3))
+
+
+function dollaDollaBills(bandz) {
+    let bills = ''
+
+    for (i = 1; i <= bandz; i++) {
+        bills += `${i} dolla dolla bills yaa `
+    }
+
+    return bills
+}
+
+console.log(dollaDollaBills(5))
