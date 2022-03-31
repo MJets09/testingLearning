@@ -431,3 +431,49 @@ function dollaDollaBills(bandz) {
 }
 
 console.log(dollaDollaBills(5))
+
+let CaoCao = {
+    sword: 'Sword of Heaven',
+    Musou: 'Ice attackk',
+    Titles: ['King of Wei', 'Hero of Chaos'],
+    Who: function() {
+        this.Titles.forEach(x => console.log(x))
+    }
+
+}
+
+console.log(CaoCao.Who())
+
+function squareSam(arr) {
+    let sum = arr.reduce((a, b) => a + (b * b), 0)
+    return sum
+}
+
+console.log(squareSam([9, 9, 9]))
+
+function smash(words) {
+    return words.join(' ')
+};
+
+console.log(smash(['string', 'word', 'arnold']))
+
+var scienceScores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
+    34, 55, 51, 52, 44, 51, 69, 64, 66, 55, 52, 61,
+    46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44
+];
+
+// function sScores(arr) {
+//     let numba = arr.forEach((x, y) => console.log(x, y))
+
+//     return numba
+// }
+
+let highScore = 0;
+
+for (let i = 0; i < scienceScores.length; i++) {
+    // console.log(`This is your table, ${i} and here are your scores ${scienceScores[i]}`)
+    if (scienceScores[i] > highScore) {
+        highScore = scienceScores[i];
+    }
+    console.log(highScore)
+}
