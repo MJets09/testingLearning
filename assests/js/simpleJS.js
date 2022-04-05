@@ -470,10 +470,28 @@ var scienceScores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
 
 let highScore = 0;
 
+let genres = [];
+
 for (let i = 0; i < scienceScores.length; i++) {
-    // console.log(`This is your table, ${i} and here are your scores ${scienceScores[i]}`)
     if (scienceScores[i] > highScore) {
         highScore = scienceScores[i];
     }
-    console.log(highScore)
 }
+
+for (i = 0; i < scienceScores.length; i++) {
+    if (scienceScores[i] == highScore) {
+        genres.push(i)
+    }
+}
+
+console.log(genres)
+
+console.log(highScore)
+
+let str = 'Frank Ocean';
+
+function reString(x) {
+    return x.split('').map(ele => ele + ele).join('')
+}
+
+console.log(reString(str))
