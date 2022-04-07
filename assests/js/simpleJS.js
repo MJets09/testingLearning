@@ -268,16 +268,16 @@ while (num >= 0) {
 }
 
 function reverseWord(str) {
-    let reverse = str.split('').reverse();
+    let reverse = str.split('').reverse().join('');
 
     return reverse
 }
 
 console.log(reverseWord('Meng'))
 
-var sound = "";
-
 function laugh(num) {
+    var sound = "";
+
     for (var x = 0; x < num; x++) {
         sound += "ha";
     }
@@ -370,11 +370,12 @@ function makeStop() {
 
     let input = ''
 
-    while (input !== 'stop') {
+    while (input.toLowerCase() !== 'stop') {
         input = prompt('Enter in a word')
         console.log(input)
     }
 }
+
 
 const aurora = {
     name: "Aurora",
@@ -407,19 +408,6 @@ let Fang = new dog('Fang', 'boardhound', '75\"', 'Grrr! Grrr!')
 console.log(`${Fang.name} is a ${Fang.species} dog measuring ${Fang.size}`);
 console.log(`Look, a cat! ${Fang.name} barks: ${Fang.bark()}`);
 
-var countSheep = function(num) {
-
-    let sheep = ''
-
-    for (let i = 1; i <= num; i++) {
-        sheep += `${i} sheep...`
-    }
-    return sheep
-}
-
-console.log(countSheep(3))
-
-
 function dollaDollaBills(bandz) {
     let bills = ''
 
@@ -431,6 +419,7 @@ function dollaDollaBills(bandz) {
 }
 
 console.log(dollaDollaBills(5))
+
 
 let CaoCao = {
     sword: 'Sword of Heaven',
@@ -462,31 +451,40 @@ var scienceScores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
     46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44
 ];
 
-// function sScores(arr) {
-//     let numba = arr.forEach((x, y) => console.log(x, y))
+// let highScore = 0;
 
-//     return numba
+// let genres = [];
+
+// for (let i = 0; i < scienceScores.length; i++) {
+
+//     if (scienceScores[i] > highScore) {
+//         highScore = scienceScores[i];
+//     }
 // }
 
-let highScore = 0;
+// console.log(highScore)
 
-let genres = [];
 
-for (let i = 0; i < scienceScores.length; i++) {
-    if (scienceScores[i] > highScore) {
-        highScore = scienceScores[i];
+// for (i = 0; i < scienceScores.length; i++) {
+//     if (scienceScores[i] == highScore) {
+//         genres.push(i)
+//     }
+// }
+
+function countScores(arr) {
+    let highScore = 0;
+
+    for (i = 0; i <= arr.length; i++) {
+        if (arr[i] > highScore) {
+            highScore = arr[i]
+        }
     }
+    return highScore
 }
 
-for (i = 0; i < scienceScores.length; i++) {
-    if (scienceScores[i] == highScore) {
-        genres.push(i)
-    }
-}
+let newArr = [6, 8, 2, 40, 53, 51, 87, 42]
 
-console.log(genres)
-
-console.log(highScore)
+console.log(countScores(newArr))
 
 let str = 'Frank Ocean';
 
@@ -495,3 +493,39 @@ function reString(x) {
 }
 
 console.log(reString(str))
+
+let annimals = ['Wolf', 'Bear', 'Orca', 'Gorilla'];
+
+
+for (i = 0; i < annimals.length; i++) {
+
+    console.log(annimals[i])
+
+}
+
+annimals.splice(1, 3)
+
+console.log(annimals)
+
+function makeCar(make, model, manual, doors) {
+    this.make = make,
+        this.model = model,
+        this.manual = manual,
+        this.doors = doors
+}
+
+let M3 = new makeCar('BMW', 'M3', true, 2)
+
+let Testarossa = new makeCar('Ferrari', 'Testarosa', true, 2)
+
+function buyCar(car) {
+    if (car.make == 'BMW' && car.manual == true) {
+        return alert('Buy this car mayneee')
+    } else {
+        return alert('NEXT')
+    }
+}
+
+console.log(M3)
+
+buyCar(Testarossa)
