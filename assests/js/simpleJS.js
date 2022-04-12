@@ -507,25 +507,65 @@ annimals.splice(1, 3)
 
 console.log(annimals)
 
-function makeCar(make, model, manual, doors) {
+function makeCar(make, model, manual, doors, mileage) {
     this.make = make,
         this.model = model,
         this.manual = manual,
         this.doors = doors
+    this.mileage = mileage
 }
 
-let M3 = new makeCar('BMW', 'M3', true, 2)
+let M3 = new makeCar('BMW', 'M3', true, 2, 0)
 
-let Testarossa = new makeCar('Ferrari', 'Testarosa', true, 2)
+let Testarossa = new makeCar('Ferrari', 'Testarosa', true, 2, 0)
 
 function buyCar(car) {
     if (car.make == 'BMW' && car.manual == true) {
-        return alert('Buy this car mayneee')
+        return alert(`Buy this car mayneee, it's what you been looking for, a ${car.model} and is it's a manual`)
     } else {
-        return alert('NEXT')
+        return alert(`NEXT, you dont want this ${car.model}`)
     }
 }
 
 console.log(M3)
 
 buyCar(Testarossa)
+
+function createArray(number) {
+    var newArray = [];
+
+    for (var counter = 1; counter <= number; counter++) {
+        newArray.push(counter);
+    }
+
+    return newArray;
+}
+
+console.log(createArray(9))
+
+let thisIsMySong = 'AND I WONDERRRR'
+
+let lowerCase = thisIsMySong.toLowerCase()
+
+console.log(lowerCase.includes('and'))
+
+function california(car) {
+    let addCaliMiles = car.mileage + 35000;
+
+    alert(`If you're going to Califronia your new mileage would be ${addCaliMiles}`)
+}
+
+console.log(california(M3))
+
+function sum(numbers) {
+    "use strict";
+    let newSum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i])
+        newSum += numbers[i]
+    }
+    return newSum
+};
+
+console.log(sum([4, 7, 1]))
