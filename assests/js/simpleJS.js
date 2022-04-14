@@ -498,9 +498,7 @@ let annimals = ['Wolf', 'Bear', 'Orca', 'Gorilla'];
 
 
 for (i = 0; i < annimals.length; i++) {
-
     console.log(annimals[i])
-
 }
 
 annimals.splice(1, 3)
@@ -555,17 +553,31 @@ function california(car) {
     alert(`If you're going to Califronia your new mileage would be ${addCaliMiles}`)
 }
 
-console.log(california(M3))
+
+// function sum(numbers) {
+//     "use strict";
+//     let newSum = 0;
+
+//     for (let i = 0; i < numbers.length; i++) {
+//         console.log(numbers[i])
+//         newSum += numbers[i]
+//     }
+//     return newSum
+// };
+
+// console.log(sum([4, 7, 1]))
+
 
 function sum(numbers) {
-    "use strict";
+
     let newSum = 0;
 
-    for (let i = 0; i < numbers.length; i++) {
+    for (i = 0; i < numbers.length; i++) {
         console.log(numbers[i])
         newSum += numbers[i]
     }
     return newSum
-};
 
-console.log(sum([4, 7, 1]))
+}
+
+console.log(sum([5, 4, 1]))
