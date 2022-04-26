@@ -7,17 +7,18 @@ function digimon() {
     let attributeDigi = document.getElementById('attribute').value;
     let cardPack = document.getElementById('cardPack').value;
 
-    function loopPic(arr) {
-        for (i = 0; i < arr.length; i++) {
-            document.querySelector('img').src += data.image_url;
-        }
-    }
+    // &attribute=${attributeDigi}&color=${cardPack}
 
-    fetch(`https://digimoncard.io/api-public/search.php?n=${nameDigi}&attribute=${attributeDigi}&color=${cardPack}`).then(res => res.json())
+    fetch(`https://digimoncard.io/api-public/search.php?n=${nameDigi}`).then(res => res.json())
         .then(data => {
             console.log(data)
-            document.querySelector('img').src = data[0].image_url;
-            document.querySelector('p').innerHTML = data[0].name;
+            data.forEach(x => {
+                console.log(x.image_url)
+                const newImg = document.createElement('img');
+                newImg.src = x.image_url
+                document.querySelector('li').appendChild(newImg)
+
+            })
         })
         .catch(err => {
             console.log(`error ${err}`)

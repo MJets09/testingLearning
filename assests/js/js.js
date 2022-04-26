@@ -59,7 +59,7 @@ let aceBtn = document.querySelector('#aka');
 aceBtn.addEventListener('click', weBack);
 
 document.querySelector('select').onchange = function() {
-    document.querySelector('#Sabo').style.color = this.value;
+    document.querySelector('#dataType').value = this.value;
 }
 
 const strawHats = ['Zoro', 'Nami', 'Sanji', 'Usopp', 'Choppa', 'Robin'];

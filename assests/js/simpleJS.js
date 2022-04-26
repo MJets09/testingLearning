@@ -527,8 +527,6 @@ function buyCar(car) {
 
 console.log(M3)
 
-buyCar(Testarossa)
-
 function createArray(number) {
     var newArray = [];
 
@@ -553,21 +551,6 @@ function california(car) {
     alert(`If you're going to Califronia your new mileage would be ${addCaliMiles}`)
 }
 
-
-// function sum(numbers) {
-//     "use strict";
-//     let newSum = 0;
-
-//     for (let i = 0; i < numbers.length; i++) {
-//         console.log(numbers[i])
-//         newSum += numbers[i]
-//     }
-//     return newSum
-// };
-
-// console.log(sum([4, 7, 1]))
-
-
 function sum(numbers) {
 
     let newSum = 0;
@@ -581,3 +564,40 @@ function sum(numbers) {
 }
 
 console.log(sum([5, 4, 1]))
+
+console.log(newArr.sort())
+
+
+for (let prop in M3) {
+    console.log(prop)
+
+}
+
+let testArr = [5, 5, 5, 5]
+
+console.log(testArr.reduce((acc, a) => acc + a))
+
+
+
+function sameCase(a, b) {
+    if ((a == a.toLowerCase() && b == b.toLowerCase())) {
+        return 1
+    } else if ((a == a.toUpperCase() && b == b.toUpperCase())) {
+        return 1
+    }
+}
+
+console.log(sameCase('A', 'a'))
+
+function sumTwoSmallestNumbers(numbers) {
+
+    numbers = numbers.sort(function(a, b) {
+        console.log(a)
+        console.log(b)
+        return a - b;
+    });
+
+    return numbers[0] + numbers[1];
+};
+
+console.log(sumTwoSmallestNumbers([9, 5, 3, 7, 1]))

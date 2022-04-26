@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
