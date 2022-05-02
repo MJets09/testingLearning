@@ -314,19 +314,6 @@ function buildTriangle(length) {
 // because the console.log() accepts a string argument
 console.log(buildTriangle(10))
 
-
-function Hero(occupation, weapon, hometown) {
-    this.occupation = occupation,
-        this.weapon = weapon,
-        this.hometown = hometown
-}
-
-let Zhao = new Hero('Hero', 'Erdrick\'s Sword', 'Tantagel');
-
-
-console.log(Zhao)
-
-
 function squareSum(numbers) {
     return numbers.reduce((sum, num) => sum + (num * num), 0);
 }
@@ -377,22 +364,6 @@ function makeStop() {
 }
 
 
-const aurora = {
-    name: "Aurora",
-    health: 150,
-    strength: 25,
-    xp: 0,
-
-    // Return the character description
-    describe() {
-        return `${this.name} has ${this.health} health points and ${this
-        .strength} as strength and ${this.xp} XP points`;
-    }
-};
-
-aurora.xp += 30;
-
-console.log(aurora.describe());
 
 function dog(name, species, size, bark) {
     this.name = name,
@@ -451,25 +422,6 @@ var scienceScores = [60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69,
     46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44
 ];
 
-// let highScore = 0;
-
-// let genres = [];
-
-// for (let i = 0; i < scienceScores.length; i++) {
-
-//     if (scienceScores[i] > highScore) {
-//         highScore = scienceScores[i];
-//     }
-// }
-
-// console.log(highScore)
-
-
-// for (i = 0; i < scienceScores.length; i++) {
-//     if (scienceScores[i] == highScore) {
-//         genres.push(i)
-//     }
-// }
 
 function countScores(arr) {
     let highScore = 0;
@@ -482,7 +434,7 @@ function countScores(arr) {
     return highScore
 }
 
-let newArr = [6, 8, 2, 40, 53, 51, 87, 42]
+let newArr = [6, 8, 32, 40, 53, 51, 87, 42]
 
 console.log(countScores(newArr))
 
@@ -577,8 +529,6 @@ let testArr = [5, 5, 5, 5]
 
 console.log(testArr.reduce((acc, a) => acc + a))
 
-
-
 function sameCase(a, b) {
     if ((a == a.toLowerCase() && b == b.toLowerCase())) {
         return 1
@@ -600,4 +550,136 @@ function sumTwoSmallestNumbers(numbers) {
     return numbers[0] + numbers[1];
 };
 
-console.log(sumTwoSmallestNumbers([9, 5, 3, 7, 1]))
+console.log(Math.min(...newArr))
+
+console.log(Math.floor(Math.random() * 5))
+
+class Character {
+    constructor(name, health, strength, specialItem) {
+
+        this.name = name,
+            this.health = health,
+            this.strength = strength,
+            this.specialItem = specialItem,
+            this.gold = 10,
+            this.key = 1,
+            this.xp = 0
+    }
+
+    describe() {
+        return `${this.name} has ${this.health} health points, ${this.strength} strength and ${this.xp} XP. They carry with them ${this.specialItem}. ${this.name} has ${this.gold} gold and ${this.key} keys`
+    }
+
+    attack(target) {
+        if (target.health > 0) {
+
+            const damage = this.strength;
+
+            console.log(`${this.name} attacks ${target.name}`)
+
+            target.health -= damage
+
+            if (target.health > 0) {
+                console.log(`${target.name} has ${target.health} health left`)
+
+            } else {
+                target.health = 0;
+                target.gold = 0
+                target.key = 0
+                const exp = 10;
+                console.log(`${this.name} has defeated ${target.name} and gained ${exp} exp, ${target.name} has dropped ${target.gold} gold, and ${target.key} key(s).`)
+                console.log(`${this.name} has obtained ${target.gold} gold and ${target.key} key(s).`)
+
+                this.gold += target.gold;
+                this.key += target.key;
+            }
+        }
+    }
+
+}
+
+
+let Loto = new Character('Loto', 100, 10, 'Erdrick\'s Sword');
+
+console.log(Loto.describe())
+
+let ZhouYu = new Character('Zhou Yu', 100, 6, 'Xiao Qiao\'s Charm');
+
+console.log(ZhouYu.describe())
+
+function levelUp() {
+    if (xp >= 100) {
+        this.strength += Math.floor(Math.random() * 6)
+    }
+}
+
+Loto.attack(ZhouYu)
+
+
+class Dog {
+    constructor(name, species, size) {
+        this.name = name,
+            this.species = species,
+            this.size = size
+    }
+    bark() {
+        return this.size > 60 ? `Grrr! Grrr!` : `Woof! Woof!`
+    }
+}
+
+const fang = new Dog("Fang", "boarhound", 75);
+console.log(`${fang.name} is a ${fang.species} dog measuring ${fang.size}`);
+console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
+
+const snowy = new Dog("Snowy", "terrier", 22);
+console.log(`${snowy.name} is a ${snowy.species} dog measuring ${snowy.size}`);
+console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
+
+class Account {
+    constructor(name) {
+        this.name = name,
+            this.balance = 0
+    }
+    credit(x) {
+        this.balance += x
+    }
+    describe() {
+        return `Owner: ${this.name}, balance: ${this.balance}`
+    }
+}
+
+let customerAccounts = [new Account('Sean'), new Account('Brad'), new Account('Georges')]
+
+customerAccounts.forEach(x => {
+    x.credit(+(1000))
+    console.log(x.describe())
+})
+
+
+
+console.log(thisIsMySong.split('').map((x) => x + x).join(''))
+
+function isPrime(x) {
+    if (x % 2 === 0) {
+        return x
+    }
+}
+
+
+console.log(newArr.filter(isPrime))
+
+console.log((['5', 3, '2', 1]))
+
+function getSum(a, b) {
+    let aB = a + b
+
+    if (aB == a) {
+        console.log(a)
+        return a
+    }
+
+
+
+}
+
+console.log(getSum(1, 4))
