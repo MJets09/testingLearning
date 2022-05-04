@@ -670,16 +670,34 @@ console.log(newArr.filter(isPrime))
 
 console.log((['5', 3, '2', 1]))
 
-function getSum(a, b) {
-    let aB = a + b
+// const lateMessage = function() {
+//     alert('This message came a little late')
+// }
 
-    if (aB == a) {
-        console.log(a)
-        return a
+// setTimeout(lateMessage, 3000)
+
+const circle = {
+    radius: 1,
+    location: {
+        x: 1,
+        y: 1
     }
+};
 
 
+console.log(circle)
 
+function getMiddle(s) {
+    if (s.length % 2 == 1) {
+        return s.substring((s.length / 2) + 1, (s.length / 2))
+    } else if (s.length % 2 == 0) {
+        return s.substring((s.length / 2) - 1, (s.length / 2) + 1)
+    }
 }
+console.log(getMiddle("handers"));
+console.log(getMiddle("test"));
 
-console.log(getSum(1, 4))
+
+document.querySelector('h1').setAttribute('class', 'glasses')
+
+console.log(document.querySelector('h1').getAttribute('class'))
