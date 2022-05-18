@@ -134,7 +134,7 @@ function ussop() {
 
 
 
-document.querySelector('button').addEventListener('click', checkDate)
+document.querySelector('#date').addEventListener('click', checkDate)
 
 function checkDate() {
 
@@ -713,11 +713,18 @@ function repeatStr(n, s) {
 
 console.log(repeatStr(3, "*"))
 
-console.log('Synchronus 1')
+
+document.getElementById('list').addEventListener('click', deletion)
+holdThisLi = document.querySelector('li')
+
+function deletion(){
+    holdThisLi.remove()
+}
 
 
-setTimeout(_ => console.log('Time out'), 0)
-
-Promise.resolve().then(_ => console.log("Pineapples"))
-
-console.log('cheese')
+//This function removes the created elements.FIGURE OUT HOW THIS WORKS.
+function removeElements(elements) {
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].parentNode.removeChild(elements[i]);
+    }
+}
