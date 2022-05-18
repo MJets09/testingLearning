@@ -701,3 +701,23 @@ console.log(getMiddle("test"));
 document.querySelector('h1').setAttribute('class', 'glasses')
 
 console.log(document.querySelector('h1').getAttribute('class'))
+
+function repeatStr(n, s) {
+    let str = ''
+
+    for (let i = 0; i < n; i++) {
+        str += s
+    }
+    return str
+}
+
+console.log(repeatStr(3, "*"))
+
+console.log('Synchronus 1')
+
+
+setTimeout(_ => console.log('Time out'), 0)
+
+Promise.resolve().then(_ => console.log("Pineapples"))
+
+console.log('cheese')
