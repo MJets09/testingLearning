@@ -717,7 +717,7 @@ console.log(repeatStr(3, "*"))
 document.getElementById('list').addEventListener('click', deletion)
 holdThisLi = document.querySelector('li')
 
-function deletion(){
+function deletion() {
     holdThisLi.remove()
 }
 
