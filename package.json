@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MJets09/testingLearning#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "moment": "^2.29.3"
   },
   "devDependencies": {
