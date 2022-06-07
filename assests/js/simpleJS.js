@@ -668,7 +668,6 @@ function isPrime(x) {
 
 console.log(newArr.filter(isPrime))
 
-console.log((['5', 3, '2', 1]))
 
 // const lateMessage = function() {
 //     alert('This message came a little late')
@@ -728,3 +727,15 @@ function removeElements(elements) {
         elements[i].parentNode.removeChild(elements[i]);
     }
 }
+
+function downSize(t){
+let newArr = []
+
+    for(i = t; i > 0; i--){
+        newArr.push(i)
+    }
+
+    return newArr
+}
+
+console.log(downSize(10))
