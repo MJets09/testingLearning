@@ -2,7 +2,11 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
+
 app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(bodyParser.json())
+
 
 
 
@@ -31,6 +35,9 @@ MongoClient.connect('mongodb+srv://mthao:3169maT@cluster0.fmysz.mongodb.net/?ret
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.put('/quotes', (req, res) => {
+    console.log(req.body)
+})
 
 app.listen(3500, () => {
     console.log('On port 3500')
