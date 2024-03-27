@@ -1,16 +1,15 @@
-let c = 11;
+// let userAnswer = Number(prompt("Enter a number", "Enter Num"));
+// console.log(typeof userAnswer)
 
-// for(i = 1; i < c; i++){
-//     console.log(i);
-//     console.log("Jumpman")
+// for(i = 1; i <= userAnswer; i++){
+//     alert(i);
 // }
-// let i = 0;
-// do {
-//     console.log(i)
-//     i++
-// } while(i < c);
 
-while(c < 20){
-    console.log(c)
-    c++
-}
+let i = 0;
+
+do{
+    console.log("Starting " + i)
+    i += i;
+    i++
+    console.log("Added " + i)
+} while(i<50);
