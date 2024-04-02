@@ -1,3 +1,3 @@
-meng = [32,'MN',"Weather the storm"]
+meng = "Yooo"
 
-console.log(meng[2])
+console.log(meng.replaceAll("o","!"))

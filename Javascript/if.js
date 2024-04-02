@@ -1,5 +1,6 @@
-let userAnser = Number(prompt("Enter a number: "))
+let weather = prompt("What is the degrees outside?");
 
-let over5 = userAnser > 5 ? "Yes over 5" : "No under 5";
+const weatherSate = weather>30 ? "Its pretty warm" : "Its pretty cold out";
 
-console.log(over5)
+
+alert(weatherSate)

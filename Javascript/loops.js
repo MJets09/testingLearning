@@ -3,13 +3,25 @@
 
 // for(i = 1; i <= userAnswer; i++){
 //     alert(i);
-// }
+//}
+// Whats the difference between "+prompt()" and "prompt()", or is it just a mistake
+// The value that you enter in the prompt will return as a string. 
+// For example: when you enter 2 in the prompt, the return value would be string "2". 
+// So if you apply + in front of prompt it will convert the string to number. 
+// So string "2" would be converted to number 2.
 
-let i = 0;
+let userAnswer = prompt("What are you wearing? ");
+let answer = userAnswer.toLowerCase();
 
-do{
-    console.log("Starting " + i)
-    i += i;
-    i++
-    console.log("Added " + i)
-} while(i<50);
+switch(answer) {
+    
+    case "nike":
+        alert("noice");
+        break;
+    case "adidas":
+        alert("run it");
+        break;
+    default:
+        alert("I aint got it");
+        break;
+}
