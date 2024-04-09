@@ -7,7 +7,7 @@
 // The idea why people are using function expression rather than declaration 
 // is that you don't pollute the global scope unlike the function expression.
 
-
+//Function expression, basically saving function into a variable to use later
 let sayHi = function() {
     alert( "Hello" );
   };
@@ -16,7 +16,7 @@ let sayHi = function() {
   let func = sayHi;
 
 
-
+//Function declaration
 function ask(question,yes,no){
     if(confirm(question)) {
         yes()
@@ -33,4 +33,19 @@ function no(){
 }
 
 
-ask("Did you want those?", yes,no)
+//Arrow function, create the variable assign it to the parameters
+//then function arrow(=>) returning what you want
+let sum = (a,b) => a+b;
+
+
+let combineName = (a,b) => a+" "+b;
+
+console.log(combineName("Shohei", "Ohtani"))
+
+let shoutOut = () => alert("OHTANI")
+
+let AE1 = (a,b,c) =>{
+    return antman = a+b+c;
+}
+
+console.log(AE1(5,5,5))

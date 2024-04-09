@@ -4,4 +4,23 @@ meng24 = {
     thoughts: "Weather the storm"
 }
 
-console.log(meng24.thoughts)
+// console.log(meng24.thoughts)
+
+// meng24.tired = false;
+
+// console.log(meng24)
+
+// let questionMe = prompt("Waht did you want to know about me? ").toLowerCase();
+
+// console.log(questionMe)
+// alert(meng24[questionMe])
+
+let makeUser = (name,age) => {
+    return {
+        name: name,
+        age: age,
+    }
+}
+
+makeUser("David", 21);
+
