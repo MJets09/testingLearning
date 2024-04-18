@@ -1,8 +1,9 @@
 let user = confirm("Did you work today?");
 
-if(user == true){
-    alert("You did go to work")
+
+function yesNo(){
+    return user == true ? alert("You went to work") : alert("You did not go to work")
 }
-else{
-    alert("You didnt go to work")
-}
+
+
+yesNo()
