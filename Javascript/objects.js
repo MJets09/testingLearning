@@ -15,12 +15,3 @@ meng24 = {
 // console.log(questionMe)
 // alert(meng24[questionMe])
 
-let makeUser = (name,age) => {
-    return {
-        name: name,
-        age: age,
-    }
-}
-
-makeUser("David", 21);
-
